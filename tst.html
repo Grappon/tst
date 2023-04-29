@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="dark" style="color-scheme: dark;" lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu HTML bonito</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Você é viado?</h1>
+    </header>
+    <main>
+      <button id="sim" class="btn primary-btn">Sim</button>
+      <button id="meuBotao"  class="btn secondary-btn">Não</button>
+    </main>
+    <script>
+        var button = document.getElementById('meuBotao');
+        button.addEventListener('click', function() {
+        // Gera uma posição x e y aleatória
+        var x = Math.floor(Math.random() * ((0.75) + 0.1) * window.innerWidth);
+        var y = Math.floor(Math.random() * ((0.75) + 0.1) * window.innerHeight);
+        
+        // Define a nova posição do botão
+        button.style.position = 'fixed';
+        button.style.left = x + 'px';
+        button.style.top = y + 'px';
+        });
+
+        /*
+        var button = document.getElementById('sim');
+        button.addEventListener('click', function() {
+            
+        });
+        */
+    </script>
+  </body>
+</html>
